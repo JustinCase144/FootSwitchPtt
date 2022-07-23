@@ -1,0 +1,120 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Footswitch PTT"
+Date "2022-07-23"
+Rev "0.2A"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Leonardo MCU
+U 1 1 62DBF360
+P 5100 3400
+F 0 "MCU" H 5100 4581 50  0000 C CNN
+F 1 "Arduino" H 5100 4490 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 5100 3400 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/ArduinoBoardLeonardo" H 5100 3400 50  0001 C CNN
+	1    5100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 62DC0D96
+P 5100 5050
+F 0 "#PWR?" H 5100 4800 50  0001 C CNN
+F 1 "GND" H 5105 4877 50  0000 C CNN
+F 2 "" H 5100 5050 50  0001 C CNN
+F 3 "" H 5100 5050 50  0001 C CNN
+	1    5100 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4500 5100 4500
+Connection ~ 5100 4500
+Wire Wire Line
+	5200 4500 5100 4500
+$Comp
+L Device:R R1
+U 1 1 62DC14EC
+P 3650 4350
+F 0 "R1" H 3720 4396 50  0000 L CNN
+F 1 "10K" H 3720 4305 50  0000 L CNN
+F 2 "" V 3580 4350 50  0001 C CNN
+F 3 "~" H 3650 4350 50  0001 C CNN
+	1    3650 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4200 3650 3300
+Wire Wire Line
+	3650 3300 4600 3300
+Wire Wire Line
+	3650 4500 3650 4750
+Wire Wire Line
+	3650 4750 4150 4750
+Wire Wire Line
+	5100 4500 5100 4750
+Connection ~ 5100 4750
+Wire Wire Line
+	5100 4750 5100 5050
+Wire Wire Line
+	5300 2400 5300 2000
+$Comp
+L Device:LED D1
+U 1 1 62DC2785
+P 4150 3850
+F 0 "D1" V 4189 3733 50  0000 R CNN
+F 1 "LED" V 4098 3733 50  0000 R CNN
+F 2 "" H 4150 3850 50  0001 C CNN
+F 3 "~" H 4150 3850 50  0001 C CNN
+	1    4150 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 62DC94C8
+P 4150 4350
+F 0 "R2" H 4220 4396 50  0000 L CNN
+F 1 "330" H 4220 4305 50  0000 L CNN
+F 2 "" V 4080 4350 50  0001 C CNN
+F 3 "~" H 4150 4350 50  0001 C CNN
+	1    4150 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3700 4150 3400
+Wire Wire Line
+	4150 3400 4600 3400
+Wire Wire Line
+	4150 4000 4150 4200
+Wire Wire Line
+	4150 4500 4150 4750
+Connection ~ 4150 4750
+Wire Wire Line
+	4150 4750 5100 4750
+$Comp
+L Switch:SW_Push SW1
+U 1 1 62DCD504
+P 3650 2900
+F 0 "SW1" V 3650 2852 50  0000 R CNN
+F 1 "SW_Push" V 3605 2852 50  0001 R CNN
+F 2 "" H 3650 3100 50  0001 C CNN
+F 3 "~" H 3650 3100 50  0001 C CNN
+	1    3650 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5300 2000 3650 2000
+Wire Wire Line
+	3650 2000 3650 2700
+Wire Wire Line
+	3650 3100 3650 3300
+Connection ~ 3650 3300
+$EndSCHEMATC
